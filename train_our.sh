@@ -1,0 +1,1 @@
+python train_our.py -m "amazon_results/Cloth_Sport_Ours/ours+2vae+KLD0.005+KLD20.001_8e-4_AddR+CS_O" -dm cloth_sport  --kl_lambda_1 0.005 --kl_lambda_2 0.005 --kl_lambda_1_t 0.001 --kl_lambda_2_t 0.001 --lr 8e-4 --KLD1 1.5 --trans_encoder 'attention' --cs_setting True &
