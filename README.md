@@ -4,28 +4,20 @@ This repository provides the implementation for our UAI 2025 paper:
 
 > **i²VAE: Interest Information Augmentation with Variational Regularizers for Cross-Domain Sequential Recommendation**  
 > *Xuying Ning, Wujiang Xu, Tianxin Wei, Xiaolei Liu*  
-> [Paper Link (TBA)](https://api.semanticscholar.org/CorpusID:270199881)
+> [Paper Link](https://arxiv.org/abs/2405.20710)
 
 ---
 
 ## 🔍 Motivation
 
-Cross-domain sequential recommendation (CDSR) faces severe challenges in modeling cold-start and long-tailed users due to limited overlapping behaviors and sparse interactions. Most existing works fail to generalize to these user groups.
-
-To address these challenges, **i²VAE** introduces:
+Cross-domain sequential recommendation (CDSR) faces severe challenges in modeling cold-start and long-tailed users due to limited overlapping behaviors and sparse interactions. To address these challenges, **i²VAE** introduces:
 
 - Mutual information-based variational regularizers to learn **disentangled cross-domain interests**.
 - A **pseudo-sequence generator (PSG)** that augments user behavior with retrieved candidate items.
 - A **denoising regularizer** to filter out noisy pseudo interactions while retaining useful signals.
 
 <p align="center">
-  <img src="assets/framework.pdf" width="700px"/>
-</p>
-
-For an intuitive understanding, please also check:
-
-<p align="center">
-  <img src="assets/toy_example.pdf" width="700px"/>
+  <img src="assets/framework.png" width="700px"/>
 </p>
 
 ---
@@ -69,23 +61,6 @@ After training, you can process and evaluate the saved results using:
 dataset/process/process_checkpoint.ipynb
 ```
 
----
-
-## 📁 Repository Structure
-
-```
-├── dataset/
-│   ├── processed_datasets/          # Preprocessed data including PSG outputs
-│   └── process/
-│       ├── process_data.ipynb       # Dataset construction and processing
-│       └── process_checkpoint.ipynb # Evaluation utility for saved results
-├── train_ours.sh                    # Main training script
-├── model/                           # Model and training logic
-├── utils/                           # Helper utilities
-├── assets/
-│   ├── framework.pdf                # i²VAE architecture overview
-│   └── toy_example.pdf              # Toy example for explanation
-```
 
 ---
 
