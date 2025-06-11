@@ -17,7 +17,7 @@ Cross-domain sequential recommendation (CDSR) faces severe challenges in modelin
 - A **denoising regularizer** to filter out noisy pseudo interactions while retaining useful signals.
 
 <p align="center">
-  <img src="assets/framework.png" width="700px"/>
+  <img src="assets/framework.jpg" width="700px"/>
 </p>
 
 ---
